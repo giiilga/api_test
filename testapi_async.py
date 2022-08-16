@@ -68,6 +68,7 @@ async def main():
 
     return it_in, it_out, total_time
 
-it_in, it_out, total_time = asyncio.run(main())
-print("\n--- %s seconds total ---" % (time() - start_time))
-print(f"average time per group = {total_time/it_out}\n")
+if __name__ == '__main__':
+    it_in, it_out, total_time = asyncio.run(main())
+    print("\n--- %s seconds total ---" % (time() - start_time))
+    print(f"average time per group = {total_time/it_out}\n")
